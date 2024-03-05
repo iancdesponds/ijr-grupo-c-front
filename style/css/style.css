@@ -74,6 +74,7 @@ header{
     color: #EC1B22;
 }
 
+/*icones do menu*/
 #menu-icon{
     font-size: 34px;
     color: var(--text-color);
@@ -81,9 +82,12 @@ header{
     margin-right: 20px;
 }
 
+
 section{
     padding: 100px 14%;
 }
+
+/*homepage*/
 .home{
     min-height: 100vh;
     width: 100%;
@@ -96,6 +100,7 @@ section{
     align-items: center;
 }
 
+/*texto maior da homepage*/
 .home-text h1{
     font-size: var(--big-font);
     font-weight: 800;
@@ -106,6 +111,7 @@ section{
     color: #FFFFFF;
 }
 
+/*texto menor da homepage*/
 .home-text p{
     font-size: var(--normal-font);
     font-weight: 500;
@@ -115,15 +121,18 @@ section{
     color: #FFFFFF;
 }
 
+/*headersticky*/
 header.sticky{
     background: var(--bg-color);
     padding: 14px 14%;
     box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
 }
 
+/*titulo da sessao de produtos*/
 .products{
     text-align: center;
 }
+/*div dos produtos*/
 .produto{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
@@ -132,12 +141,15 @@ header.sticky{
     margin-bottom: 4rem;
     text-align: center;
 }
+
+/*box de um produto so*/
 .box{
     position: relative;
     transition: all .40s ease;
     margin-top: -2.8rem;
 }
 
+/*foto de um produto so*/
 .box img{
     width: 60%;
     height: auto;
@@ -146,17 +158,20 @@ header.sticky{
 
 }
 
+/*titulo de um produto so*/
 .box h5{
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
+/*preco de um produto so*/
 .box h6{
     font-size: 16px;
     font-weight: 700;
 }
 
+/*texto do botao comprar*/
 .comprar {
     position: relative;
     display: inline-flex;
@@ -165,6 +180,7 @@ header.sticky{
     margin-top: 0.4rem;
 }
 
+/*botao comprar*/
 .comprar button {
     height: 40px;
     padding: 0.2rem;
@@ -177,14 +193,18 @@ header.sticky{
     cursor: pointer;
 }
 
+/*hover do botao comprar*/
 .comprar button:hover{
     color: #272362;
 }
+
+/*hover da box de um produto so*/
 .box:hover{
     transform: scale(1.2) translateY(-5px);
     cursor: pointer;
 }
 
+/*rodape*/
 .contact {
     background: #272362;
     display: grid;
@@ -193,10 +213,13 @@ header.sticky{
     gap: 2rem;
 }
 
+/*texto dentro do rodape*/
 .contact h3{
     font-size: 23px;
     margin-bottom: 1.6rem;
 }
+
+/*icones de redes sociais*/
 .iconsc i{
     color: #FFFFFF;
     font-size: 25px;
@@ -205,6 +228,8 @@ header.sticky{
     transition: all .35s ease;
 }
 
+
+/*botao do quero doar*/
 .qrodoar button {
     height: 40px;
     padding: 0.2rem;
@@ -218,6 +243,7 @@ header.sticky{
     margin-left: -3rem;
 }
 
+/*icones redes sociais hover*/
 .iconsc i:hover{
     color: #EC1B22;
     transform: scale(1.2) translateY(-5px);
