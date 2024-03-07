@@ -115,3 +115,22 @@ ul {
 
 /* //////////////////////////////////////// */
 
+/* Campaign */
+
+.campaign-cards {
+    display: grid;
+    /* justify-content: center; */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    place-items: center;
+}
+
+.campaign-card {
+    width:80%;
+}
+
+/* //////////////////////////////////////// */
+
