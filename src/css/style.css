@@ -472,3 +472,96 @@ a {
 
 /* ////////////////////////////////////// */
 
+/* Esteira Parceiros*/
+
+/* Animação */
+@keyframes scroll{
+    0%{
+        transform: translateX(2px);
+    }
+    99%{
+        transform: translateX(calc(-250px * 5.5));
+    }
+}
+
+.parceiros{
+    text-align: center;
+    padding: 30px;
+}
+.slider {
+    background: #E0E0E0;
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+}
+
+.slider .slide-track{
+    animation: scroll 20s linear infinite;
+    display: flex;
+    width: calc(250px * 12);
+}
+
+
+.slider .cacau{
+    height: 250px;
+    width: 250px;
+    margin-left: 110px;
+    margin-top: 4.3rem;
+}
+
+.slider .entreposto{
+    height: 250px;
+    width: 250px;
+    margin-left: 110px;
+    margin-top: 5.6rem;
+}
+
+.slider .nag{
+    height: 250px;
+    width: 250px;
+    margin-left: 110px; 
+    margin-bottom: -20rem;
+}
+
+.slider .colegio{
+    height: 250px;
+    width: 250px;
+    scale: 99%;
+    margin-left: 110px;
+    margin-top: -0.1rem;
+}
+
+.slider .insperjr{
+    height: 250px;
+    width: 250px;
+    scale: 84%;
+    margin-left: 110px;
+    margin-top: -0.3rem;
+}
+
+.slider .mattosfilho{
+    height: 250px;
+    width: 250px;
+    margin-left: 110px;
+    margin-top: -0.1rem;
+}
+
+.slider .choco{
+    height: 250px;
+    width: 250px;
+    margin-left: 110px; 
+    margin-top: -0.2rem;
+}
+
+.slider .agax{
+    scale: 81%;
+    height: 250px;
+    width: 250px;
+    margin-left: 80px;
+    margin-top: -1.4rem;
+}
+
+/* /////////////////////////////////////////// */
+
