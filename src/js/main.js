@@ -18,6 +18,26 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+// Smooth scrolling
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll(".menu-menu li a");
+
+    links.forEach(link => {
+        link.addEventListener("click", scrollToSection);
+    });
+
+    function scrollToSection(e) {
+        e.preventDefault();
+        const targetId = e.target.getAttribute("href").substring(1);
+        const targetSection = document.getElementById(targetId);
+        const offsetTop = targetSection.offsetTop;
+        window.scrollTo({
+            top: offsetTop,
+            behavior: "smooth"
+        });
+    }
+});
+
 // Sticky menu background
 window.addEventListener("scroll", function () {
     if (window.scrollY > 150) {
