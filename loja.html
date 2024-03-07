@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mães Solidárias</title>
+        <link rel="stylesheet" type="text/css" href="pages/homepage/style.css">
+
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <script src="pages/homepage/script.js"></script>
+        <script src="pages/homepage/produtos.js"></script>
+        <script src="pages/homepage/carrinho.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    </head>
+</html>
+
+<body>
+    <header>
+        <img class="logo" src="pages/homepage/imgs/logomaesolidarias.png">
+
+        <ul class="navlist">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="minhas-compras.html">Minhas Compras</a></li>
+        </ul>
+
+        <!--icone do carrinho-->
+        <div class="header-icons">
+            <a href="#" id="carrinho-icon" onclick="redirectCarrinho()">
+                <i class="bx bx-shopping-bag"></i>
+                <span id="carrinho-count" class="count">0</span>
+            </a>
+        </div>  
+    </header>
+
+    <!---home----->
+    <section class="home" id="home">
+        <div class="home-text">
+        <h1>Bem-vindo a nossa loja!</h1>
+        <p>Compre e nos ajude a transformar vidas</p>
+        </div>
+    </section>
+
+    <div id="popup" class="popup" onclick="redirectCarrinho()"> Produto adicionado ao carrinho! </div>
+
+    <!---titulo da sessao dos produtos-->
+    <section class="products" id="products">
+        <div class="center-text">
+            <h2>Nossos Produtos</h2>
+        </div>
+    </section>
+
+    <div class="produto"></div> 
+
+     <!-----contato---->
+     <!---aqui a h3 eh tipo q um titulo do rodape, enquanto h5 eh meio q um subtitulo-->
+     <!---iconsc sao os icone q qnd clicar vao redirecionar p rede social-->
+     <section class="contact" id="contact">
+        <div class="meioscontato">
+            <h3>Mães Solidárias</h3>
+            <h5>Fale conosco</h5>
+            <div class="iconsc">
+                <a href="#"><i class="bx bxl-facebook-square"></i></a>
+                <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+                <a href="#"><i class="bx bxl-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

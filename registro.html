@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="pages/registerpage/register.css"> 
+    <link rel="stylesheet" href="pages/common/popup.css">
+</head>
+<body>
+    <div class="registro-container">
+        <form id="registroForm">
+            <h2>Registro</h2>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirmação de Senha:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button id="register-button" type="submit">Registrar</button>
+            <p class="login-link">Já tem uma conta? <a href="login.html">Faça login</a></p>
+        </form>
+    </div>
+    <div id="popup" class="popup"></div>
+    <script src="pages/registerpage/register.js"></script>
+    <script src="pages/common/popup.js"></script>
+</html>

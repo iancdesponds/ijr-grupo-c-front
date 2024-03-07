@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pages/cartpage/carrinho.css">
+    <title>Carrinho de Compras</title>
+</head>
+<body>
+    <div class="cart-container">
+        <h1>Carrinho de Compras</h1>
+        <ul id="cart-list"></ul>
+        <div id="cart-summary" class="cart-summary">
+            <p>Total: R$ <span id="total">0.00</span></p>
+            <p>Quantidade de Itens: <span id="item-count">0</span></p>
+        </div>
+        <div class="checkout-btn">
+            <button id="checkout-button" class="checkout-button" onclick="showSpinner()">Finalizar Compra
+                <i id="loading" class="fas fa-spinner fa-spin hidden"></i>
+            </button>
+            <div id="spinner" class="spinner" hidden></div>
+        </div>
+    </div>
+    <script src="pages/cartpage/carrinho.js"></script>
+</body>
+</html>
+

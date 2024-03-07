@@ -1,0 +1,376 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --bg-color: #ffffff;
+    --text-color: #111111;
+    --main-color: #c8815f;      
+    --big-font: 4.5rem;
+    --h2-font: 3.3rem;
+    --h3-font: 2rem;
+    --normal-font: 1rem;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    width: 104%;
+    height: 15%;
+    top: 0;
+    right: -10px;
+    z-index: 1000;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #E0E0E0;
+    padding: 1px 10%;
+    transition: all .35s ease;
+}
+
+.logo{
+    scale: 33%;
+    margin-left: -13rem;
+    margin-top: -1rem;
+}
+
+.navlist{
+    display: flex;
+}
+
+.navlist a{
+    color: #272362;
+    font-weight: 600;
+    padding: 10px 25px;
+    margin-bottom: 10rem;
+    font-size: var(--normal-font);
+    transition: all .36s ease;
+    margin-right: -1rem;
+    left: 2rem;
+}
+
+.navlist a:hover{
+    color: #EC1B22;
+}
+
+.header-icons i{
+    font-size: 32px;
+    color: #272362;
+    margin-right: 20px;
+    transition: all .36s ease;
+}
+
+.header-icons i:hover{
+    color: #EC1B22;
+}
+
+/*icones do menu*/
+#menu-icon{
+    font-size: 34px;
+    color: var(--text-color);
+    z-index: 10001;
+    margin-right: 20px;
+}
+
+
+section{
+    padding: 100px 14%;
+}
+
+/*homepage*/
+.home{
+    min-height: 100vh;
+    width: 100%;
+    background: #EC1B22;
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+
+/*texto maior da homepage*/
+.home-text h1{
+    font-size: var(--big-font);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.4rem;
+    position: relative;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/*texto menor da homepage*/
+.home-text p{
+    font-size: var(--normal-font);
+    font-weight: 500;
+    margin-bottom: 3rem;
+    letter-spacing: .2rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/*headersticky*/
+header.sticky{
+    background: var(--bg-color);
+    padding: 14px 14%;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+/*titulo da sessao de produtos*/
+.products{
+    text-align: center;
+}
+/*div dos produtos*/
+.produto{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 1.3rem;
+    align-items: center;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.popup:hover {
+    cursor: pointer;
+}
+
+/*box de um produto so*/
+.box{
+    position: relative;
+    transition: all .40s ease;
+    margin-top: -2.8rem;
+}
+
+/*foto de um produto so*/
+.box img{
+    width: 60%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+}
+
+.img-container{
+    max-width: 100%;
+    height: auto; /* A altura será ajustada automaticamente para manter a proporção original */
+    max-height: 200px;
+
+    
+}
+
+/*titulo de um produto so*/
+.box h5{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/*preco de um produto so*/
+.box h6{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/*texto do botao comprar*/
+.comprar {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.4rem;
+}
+
+/*botao comprar*/
+.comprar button {
+    height: 40px;
+    padding: 0.2rem;
+    color: #E0E0E0;
+    /* background-color: #EC1B22; */
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*hover do botao comprar important*/
+
+.comprar button:hover {
+    background-color: #EC1B22;
+}
+
+/*hover da box de um produto so*/
+.box:hover{
+    transform: scale(1.2) translateY(-5px);
+    cursor: pointer;
+}
+
+/*rodape*/
+.contact {
+    background: #272362;
+    display: grid;
+    color: #FFFFFF;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 2rem;
+}
+
+/*texto dentro do rodape*/
+.contact h3{
+    font-size: 23px;
+    margin-bottom: 1.6rem;
+}
+
+/*icones de redes sociais*/
+.iconsc i{
+    color: #FFFFFF;
+    font-size: 25px;
+    margin-right: 1rem;
+    margin-top: 0.9rem;
+    transition: all .35s ease;
+}
+
+
+/*botao do quero doar*/
+.qrodoar button {
+    height: 40px;
+    padding: 0.2rem;
+    color: #E0E0E0;
+    background-color: #EC1B22;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: -3rem;
+}
+
+/*icones redes sociais hover*/
+.iconsc i:hover{
+    color: #EC1B22;
+    transform: scale(1.2) translateY(-5px);
+    cursor: pointer;
+}
+
+.parceiros{
+    text-align: center;
+    padding: 35px;
+}
+
+/* animacao */
+@keyframes scroll{
+    0%{
+        transform: translateX(2px);
+    }
+    99%{
+        transform: translateX(calc(-250px * 5.5));
+    }
+}
+
+/* esteira*/
+.slider {
+    background: #9A98A6;
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    margin-bottom: 70px;
+}
+
+/*elemento q roda*/
+.slider .slide-track{
+    animation: scroll 20s linear infinite;
+    display: flex;
+    width: calc(250px * 12);
+}
+
+
+/* formatacao de cada logo (muito provavelmente tinha uma forma mais inteligente de fazer isso)*/
+.slider .cacau{
+    height: 250px;
+    width: 250px;
+    margin-left: 110px;
+    margin-top: 4.3rem;
+}
+
+.slider .entreposto{
+    height: 250px;
+    width: 250px;
+    margin-left: 110px;
+    margin-top: 5.6rem;
+}
+
+.slider .nag{
+    height: 250px;
+    width: 250px;
+    margin-left: 110px; 
+    margin-bottom: -20rem;
+}
+
+.slider .colegio{
+    height: 250px;
+    width: 250px;
+    scale: 99%;
+    margin-left: 110px;
+    margin-top: -0.1rem;
+}
+
+.slider .insperjr{
+    height: 250px;
+    width: 250px;
+    scale: 84%;
+    margin-left: 110px; 
+    margin-top: -0.3rem;
+}
+
+.slider .mattosfilho{
+    height: 250px;
+    width: 250px;
+    margin-left: 110px;
+    margin-top: -0.1rem;
+}
+
+.slider .choco{
+    height: 250px;
+    width: 250px;
+    margin-left: 110px; 
+    margin-top: -0.2rem;
+}
+
+
+.slider .agax{
+    scale: 81%;
+    height: 250px;
+    width: 250px;
+    margin-left: 80px;
+    margin-top: -1.4rem;
+}
+
+

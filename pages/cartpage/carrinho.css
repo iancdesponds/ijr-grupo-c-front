@@ -1,0 +1,290 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.cart-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-item {
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+}
+
+.item-image {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.item-controls {
+    display: flex;
+    align-items: center;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.botoes button {
+    flex: 1; 
+    padding: 10px; 
+    min-width: 150px;
+    text-align: center;
+}
+
+/* Adiciona estilos para garantir consistência e responsividade */
+button {
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.btn-minus,
+.btn-plus{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px; /* Ajuste para espaçamento entre botões em telas pequenas */
+    cursor: pointer;
+    border-radius: 3px; 
+}
+
+.btn-remove {
+    background-color: #f90000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px; /* Ajuste para espaçamento entre botões em telas pequenas */
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+
+.item-total {
+    font-weight: bold;
+}
+
+.cart-summary {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.cart-summary p {
+    margin: 10px 0;
+}
+
+.cart-summary span {
+    font-weight: bold;
+    color: #333;
+}
+
+.checkout-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#checkout-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    
+    .cart-container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .cart-item {
+        border-bottom: 1px solid #ccc;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centralizar conteúdo na tela pequena */
+    }
+    
+    .item-info {
+        display: flex;
+        flex-direction: column; /* Ajuste para empilhar os elementos em telas pequenas */
+        align-items: center; /* Centralizar conteúdo na tela pequena */
+    }
+    
+    .item-image {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px; /* Adaptação para espaçamento inferior na tela pequena */
+    }
+    
+    .item-controls {
+        margin-top: 10px; /* Adaptação para espaçamento superior na tela pequena */
+    }
+    
+    .btn-minus,
+    .btn-plus{
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        margin: 5px 0; /* Ajuste para espaçamento entre botões em telas pequenas */
+        cursor: pointer;
+        border-radius: 3px; 
+    }
+    
+    .btn-remove {
+        background-color: #f90000;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        margin: 5px 0; /* Ajuste para espaçamento entre botões em telas pequenas */
+        cursor: pointer;
+        border-radius: 3px;
+    }
+    
+    .item-total {
+        font-weight: bold;
+        margin-top: 10px; /* Adaptação para espaçamento superior na tela pequena */
+    }
+    
+    .cart-summary {
+        margin-top: 20px;
+        text-align: right;
+    }
+    
+    .cart-summary p {
+        margin: 10px 0;
+    }
+    
+    .cart-summary span {
+        font-weight: bold;
+        color: #333;
+    }
+    
+    .checkout-btn {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    #checkout-button {
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+    }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.pagamento-aprovado {
+    margin-top: 30px;
+    background-color: #f8f9fa; /* Um fundo claro, mas não inteiramente branco, para suavizar o visual */
+    padding: 20px; /* Espaçamento interno para não tocar nas bordas */
+    border-radius: 5px; /* Bordas arredondadas para um look moderno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Uma leve sombra para adicionar profundidade */
+    text-align: center; /* Centraliza o texto para um look mais limpo e organizado */
+}
+
+.pagamento-aprovado h2 {
+    color: #28a745; /* Uma cor verde que indica sucesso */
+    margin-top: 0; /* Remove a margem superior para alinhar melhor no topo */
+}
+
+.pagamento-aprovado p {
+    color: #6c757d; /* Uma cor de texto suave para não sobrecarregar visualmente */
+    line-height: 1.5; /* Espaçamento de linha para melhor legibilidade */
+}
+
+.pagamento-aprovado button {
+    background-color: #0d6acd; /* Cor azul padrão para ações */
+    color: white; /* Texto branco para contraste */
+    border: none; /* Sem bordas para um look limpo */
+    padding: 10px 20px; /* Espaçamento interno adequado */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Indica que o elemento é clicável */
+    transition: background-color 0.3s; /* Transição suave para o hover */
+}
+
+.pagamento-aprovado button:hover {
+    background-color: #0056b3; /* Um azul mais escuro ao passar o mouse para feedback visual */
+}
+
+
