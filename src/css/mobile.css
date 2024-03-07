@@ -134,3 +134,25 @@ ul {
 
 /* //////////////////////////////////////// */
 
+/* Footer */
+
+@media screen and (max-width: 420px) {
+    #social-media-link {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0px 5px;
+        
+    }
+}
+
+hr {
+    width: 80%;
+    max-width: 80%;
+    min-width: none;
+}
+
+/* //////////////////////////////////////// */
