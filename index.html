@@ -4,20 +4,22 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Mães Solidárias</title>
-        <link rel="stylesheet" type="text/css" href="style/css/style.css">
+        <link rel="stylesheet" type="text/css" href="pages/homepage/style.css">
 
-        <link rel="stylesheet"
-        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <script src="pages/homepage/script.js"></script>
+        <script src="pages/homepage/produtos.js"></script>
+        <script src="pages/homepage/carrinho.js"></script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    </head>
 </html>
 
 <body>
-    
     <header>
-        <img class="logo" src="style/imgs/logomaesolidarias.png">
+        <img class="logo" src="pages/homepage/imgs/logomaesolidarias.png">
 
         <ul class="navlist">
             <li><a href="#inicio">Início</a></li>
@@ -25,23 +27,17 @@
             <li><a href="#acoes">Ações</a></li>
             <li><a href="#contato">Contato</a></li>
             <li><a href="loja">Loja</a></li>
-            <li><a href="comoajudar">Como ajudar?</a></li>
+            <li><a href="minhas-compras.html">Minhas Compras</a></li>
         </ul>
 
         <!--icone do carrinho-->
         <div class="header-icons">
-            <a href="#"><i class="bx bx-shopping-bag"></i></a>
-        </div>
-
-        <!--botao do qro doar-->
-        <ul class="qrodoar">
-            <button type="button">Quero doar</button>
-        </ul>
+            <a href="#" id="carrinho-icon" onclick="redirectCarrinho()">
+                <i class="bx bx-shopping-bag"></i>
+                <span id="carrinho-count" class="count">0</span>
+            </a>
+        </div>  
     </header>
-
-    <!----js script------>
-
-    <script src="script/script.js"></script>
 
     <!---home----->
     <section class="home" id="home">
@@ -51,6 +47,8 @@
         </div>
     </section>
 
+    <div id="popup" class="popup" onclick="redirectCarrinho()"> Produto adicionado ao carrinho! </div>
+
     <!---titulo da sessao dos produtos-->
     <section class="products" id="products">
         <div class="center-text">
@@ -58,38 +56,7 @@
         </div>
     </section>
 
-    <!--a div produto eh de todos os produtos, cada box eh um produto individual-->
-    <!--h5 eh o titulo do produto, h6 eh o preco e a class comprar eh do botao de comprar-->
-    <div class="produto">
-        <div class="box">
-            <img src="style/imgs/almofada1.jpeg">
-            <h5>Almofada estampa 1</h5>
-            <h6>R$29.40</h6>
-            <div class="comprar">
-                <button type="button">Comprar</button>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="style/imgs/almofada1.jpeg">
-            <h5>Almofada estampa 1</h5>
-            <h6>R$29.40</h6>
-            <div class="comprar">
-                <button type="button">Comprar</button>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="style/imgs/almofada1.jpeg">
-            <h5>Almofada estampa 1</h5>
-            <h6>R$29.40</h6>
-            <div class="comprar">
-                <button type="button">Comprar</button>
-            </div>
-        </div>
-    </div>
-</div>
-
+    <div class="produto"></div>
 
     <!--titulo da esteira-->
     <div class="parceiros">
@@ -101,39 +68,31 @@
         <div class="slide-track">
     
             <div class="cacau">
-                <img src="style/imgs/cacaushowlogo.png" height="100" width="250", alt="">
+                <img src="pages/homepage/imgs/cacaushowlogo.png" height="100" width="250", alt="">
             </div>
             <div class="entreposto">
-                <img src="style/imgs/entrpostologo.png" height="100" width="250", alt="">
+                <img src="pages/homepage/imgs/entrpostologo.png" height="100" width="250", alt="">
             </div>
             <div class="nag">
-                <img src="style/imgs/mistrallogo.png" height="250" width="250", alt="">
+                <img src="pages/homepage/imgs/mistrallogo.png" height="250" width="250", alt="">
             </div>
             <div class="colegio">
-                <img src="style/imgs/colegiologo.png" height="250" width="250", alt="">
+                <img src="pages/homepage/imgs/colegiologo.png" height="250" width="250", alt="">
             </div>
             <div class="insperjr">
-                <img src="style/imgs/insperjrlogo.png" height="250" width="250", alt="">
+                <img src="pages/homepage/imgs/insperjrlogo.png" height="250" width="250", alt="">
             </div>
             <div class="mattosfilho">
-                <img src="style/imgs/mattosfilhologo.png" height="250" width="300", alt="">
+                <img src="pages/homepage/imgs/mattosfilhologo.png" height="250" width="300", alt="">
             </div>
             <div class="choco">
-                <img src="style/imgs/chocolatlogo.png" height="250" width="250", alt="">
+                <img src="pages/homepage/imgs/chocolatlogo.png" height="250" width="250", alt="">
             </div>
             <div class="agax">
-                <img src="style/imgs/agaxturlogo.png" height="250" width="250", alt="">
+                <img src="pages/homepage/imgs/agaxturlogo.png" height="250" width="250", alt="">
             </div>
         </div>
     </div>
-
-
-    
-     
-    
-
-
-
 
      <!-----contato---->
      <!---aqui a h3 eh tipo q um titulo do rodape, enquanto h5 eh meio q um subtitulo-->

@@ -1,0 +1,98 @@
+/* Reset básico para remover estilos padrões do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos filhos no eixo cruzado */
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o texto do título */
+}
+
+#compras-container {
+    margin-top: 20px;
+    width: 80%; /* Diminui a largura da listagem para 80% da largura do viewport */
+    max-width: 600px; /* Define uma largura máxima para a listagem */
+}
+
+.compra {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.compra h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.compra p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.item + .item {
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-info p {
+    margin: 2px 0;
+    line-height: 1.4;
+}
+
+.item-info p strong {
+    color: #000;
+}
+
+.compra-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.compra-header h2 {
+    font-size: 18px; /* Diminui o tamanho do título */
+    color: #333;
+    flex: 1;
+}
+
+.preco-total {
+    font-weight: bold;
+    margin-left: 20px; /* Garante espaço entre o título e o preço */
+}
+
+/* Continuação dos estilos existentes */

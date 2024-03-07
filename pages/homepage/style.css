@@ -144,6 +144,19 @@ header.sticky{
     text-align: center;
 }
 
+.popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
 /*box de um produto so*/
 .box{
     position: relative;
@@ -158,6 +171,14 @@ header.sticky{
     margin-bottom: 20px;
     border-radius: 10px;
 
+}
+
+.img-container{
+    max-width: 100%;
+    height: auto; /* A altura será ajustada automaticamente para manter a proporção original */
+    max-height: 200px;
+
+    
 }
 
 /*titulo de um produto so*/
