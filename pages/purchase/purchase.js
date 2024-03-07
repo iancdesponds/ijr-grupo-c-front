@@ -37,7 +37,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
         }
     })
     .then(response => {
-        if (!response.ok) {
+        if(response.status === 401){
+            window.location.href = 'login.html';
+        } else if (!response.ok){
             throw new Error("Erro na requisição ao backend");
         }
         return response.json();

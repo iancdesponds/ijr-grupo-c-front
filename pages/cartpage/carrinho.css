@@ -48,6 +48,33 @@ ul {
     align-items: center;
 }
 
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.botoes button {
+    flex: 1; 
+    padding: 10px; 
+    min-width: 150px;
+    text-align: center;
+}
+
+/* Adiciona estilos para garantir consistência e responsividade */
+button {
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
 
 
 .btn-minus,
@@ -225,6 +252,39 @@ ul {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+.pagamento-aprovado {
+    margin-top: 30px;
+    background-color: #f8f9fa; /* Um fundo claro, mas não inteiramente branco, para suavizar o visual */
+    padding: 20px; /* Espaçamento interno para não tocar nas bordas */
+    border-radius: 5px; /* Bordas arredondadas para um look moderno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Uma leve sombra para adicionar profundidade */
+    text-align: center; /* Centraliza o texto para um look mais limpo e organizado */
+}
+
+.pagamento-aprovado h2 {
+    color: #28a745; /* Uma cor verde que indica sucesso */
+    margin-top: 0; /* Remove a margem superior para alinhar melhor no topo */
+}
+
+.pagamento-aprovado p {
+    color: #6c757d; /* Uma cor de texto suave para não sobrecarregar visualmente */
+    line-height: 1.5; /* Espaçamento de linha para melhor legibilidade */
+}
+
+.pagamento-aprovado button {
+    background-color: #0d6acd; /* Cor azul padrão para ações */
+    color: white; /* Texto branco para contraste */
+    border: none; /* Sem bordas para um look limpo */
+    padding: 10px 20px; /* Espaçamento interno adequado */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Indica que o elemento é clicável */
+    transition: background-color 0.3s; /* Transição suave para o hover */
+}
+
+.pagamento-aprovado button:hover {
+    background-color: #0056b3; /* Um azul mais escuro ao passar o mouse para feedback visual */
 }
 
 

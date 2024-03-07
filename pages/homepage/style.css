@@ -157,6 +157,10 @@ header.sticky{
     z-index: 999;
 }
 
+.popup:hover {
+    cursor: pointer;
+}
+
 /*box de um produto so*/
 .box{
     position: relative;
@@ -208,7 +212,7 @@ header.sticky{
     height: 40px;
     padding: 0.2rem;
     color: #E0E0E0;
-    background-color: #EC1B22;
+    /* background-color: #EC1B22; */
     border: 2px solid transparent;
     border-radius: 5px;
     font-size: 14px;
@@ -216,9 +220,10 @@ header.sticky{
     cursor: pointer;
 }
 
-/*hover do botao comprar*/
-.comprar button:hover{
-    color: #272362;
+/*hover do botao comprar important*/
+
+.comprar button:hover {
+    background-color: #EC1B22;
 }
 
 /*hover da box de um produto so*/

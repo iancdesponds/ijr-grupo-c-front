@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", ()=>{
 
-    function showPopup() {
+    showPopup = ()=>{
         const popup = document.getElementById('popup');
         if (popup) {
             popup.style.display = 'block';
             setTimeout(() => {
                 popup.style.display = 'none';
-            }, 2000);
+            }, 3000);
         } else {
             console.error('Elemento popup não encontrado no DOM.');
         }

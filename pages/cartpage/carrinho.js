@@ -125,7 +125,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
         }
     })
     .then(response => {
-        if (!response.ok) {
+        if(response.status === 401){
+            window.location.href = 'login.html';
+        } else if (!response.ok) {
             throw new Error("Erro na requisição ao backend");
         }
         return response.json();
@@ -142,39 +144,44 @@ function showSpinner() {
     document.getElementById('checkout-button').hidden = true;
     spinner.hidden = false;
 
-    fetch("http://localhost:8000/checkout/", {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Token ' + localStorage.getItem('token'),
-        }
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error("Erro na requisição ao backend");
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log('Resposta do backend:', data);
-    });
+    // fetch("http://localhost:8000/checkout/", {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //         'Authorization': 'Token ' + localStorage.getItem('token'),
+    //     }
+    // })
+    // .then(response => {
+    //     if (!response.ok) {
+    //         throw new Error("Erro na requisição ao backend");
+    //     }
+    //     return response.json();
+    // })
+    // .then(data => {
+    //     console.log('Resposta do backend:', data);
+    // });
 
 
     setTimeout(()=>{
         spinner.hidden = true;
         document.getElementById('cart-summary').hidden = true;
         document.getElementById('cart-list').innerHTML = `
-        <hr>
         <div class="pagamento-aprovado">
             <h2>Pagamento Aprovado!</h2>
-            <p>O seu pagamento foi processado com sucesso.</p>
-            <p>Obrigado por escolher nossos serviços!</p>
-            <button onclick="retornarParaHome()">Voltar para a Página Inicial</button>
+            <p>O seu pagamento foi processado com sucesso!</p>
+            <div class="botoes">
+                <button onclick="redirectHome()">Voltar para a Página Inicial</button>
+                <button onclick="redirectMinhasCompras()">Minhas Compras</button>
             </div>
-            `;
+        </div>
+        `;
         }, 2000); 
     }
 
-function retornarParaHome(){
+redirectHome = ()=>{
     window.location.href = 'index.html';    
+}
+
+redirectMinhasCompras = ()=>{
+    window.location.href = 'minhas-compras.html';
 }
