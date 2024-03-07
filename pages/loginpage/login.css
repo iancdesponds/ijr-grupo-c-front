@@ -69,8 +69,35 @@ button:hover {
     background-color: #0056b3;
 }
 
+.registro-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.registro-link a{
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
 @media (max-width: 600px) {
     .login-container {
         padding: 20px 30px;
     }
+}
+
+@keyframes pulseAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .animate-pulse {
+    animation: pulseAnimation 0.5s ease-in-out;
 }

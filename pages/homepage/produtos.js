@@ -49,6 +49,18 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 buttonElement.textContent = produto.estoque > 0 ? "Comprar" : "Indisponível";
                 buttonElement.disabled = produto.estoque <= 0;
                 buttonElement.style.backgroundColor = produto.estoque <= 0 ? "grey" : "green";
+                buttonElement.style.color = "white";
+
+                buttonElement.onmouseover = () => {
+                    buttonElement.style.backgroundColor = produto.estoque <= 0 ? "grey" : "darkgreen";
+                    buttonElement.style.transition = "0.3s";
+                }
+
+                buttonElement.onmouseout = () => {
+                    buttonElement.style.backgroundColor = produto.estoque <= 0 ? "grey" : "green";
+                    buttonElement.style.transition = "0.3s";
+                }
+
                 buttonElement.onclick = () => {
                     fetch("http://localhost:8000/produtos/"+produto.id+"/carrinho/", {
                     method: 'POST',
