@@ -81,7 +81,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 })
                 .then(data => {
                     produtosCount.textContent = data.qtdItens;
-                    console.log('Resposta do backend:', data);
                 })
                 .catch(error => {
                     console.error('Erro na requisição:', error);

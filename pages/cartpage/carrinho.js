@@ -20,7 +20,6 @@ function updateQuantity(index, amount) {
             console.error('Erro do backend:', data.error);
         } else {
             renderCart(data);
-            console.log('Resposta do backend:', data);
         }
     })
     .catch(error => {
@@ -48,7 +47,6 @@ function removeItem(index) {
             console.error('Erro do backend:', data.error);
         } else {
             renderCart(data);
-            console.log('Resposta do backend:', data);
         }
     })
     .catch(error => {
@@ -99,21 +97,11 @@ function renderCart(cartData) {
 }
 
 function processarCompra() {
-    // Obtém a referência ao ícone de carregamento
     const loadingIcon = document.getElementById("loading");
-
-    // Mostra o ícone de carregamento
     loadingIcon.style.display = "inline-block";
-
-    // Simula um processo assíncrono (pode ser substituído pelo seu código de processamento)
     setTimeout(function() {
-        // Oculta o ícone de carregamento após o processamento
         loadingIcon.style.display = "none";
-
-        // Adicione aqui o código para finalizar a compra
-        console.log("Compra finalizada!");
-
-    }, 2000); // Tempo de simulação (2 segundos). Substitua pelo tempo real do seu processamento.
+    }, 2000);
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
@@ -133,7 +121,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         return response.json();
     })
     .then(data => {
-        console.log('Resposta do backend:', data);
         renderCart(data);
         updateCart(data);
     });
@@ -143,24 +130,6 @@ function showSpinner() {
     var spinner = document.getElementById('spinner');
     document.getElementById('checkout-button').hidden = true;
     spinner.hidden = false;
-
-    // fetch("http://localhost:8000/checkout/", {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //         'Authorization': 'Token ' + localStorage.getItem('token'),
-    //     }
-    // })
-    // .then(response => {
-    //     if (!response.ok) {
-    //         throw new Error("Erro na requisição ao backend");
-    //     }
-    //     return response.json();
-    // })
-    // .then(data => {
-    //     console.log('Resposta do backend:', data);
-    // });
-
 
     setTimeout(()=>{
         spinner.hidden = true;

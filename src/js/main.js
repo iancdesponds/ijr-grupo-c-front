@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const links = document.querySelectorAll("#navbar-items a");
 
     links.forEach(link => {
-        link.addEventListener("click", scrollToSection);
+        if(!link.id.includes("link-")){
+            link.addEventListener("click", scrollToSection);
+        }
     });
 
     function scrollToSection(e) {
@@ -23,7 +25,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const links = document.querySelectorAll(".menu-menu li a");
 
     links.forEach(link => {
-        link.addEventListener("click", scrollToSection);
+        if(!link.id.includes("link-")){
+            link.addEventListener("click", scrollToSection);
+        }
     });
 
     function scrollToSection(e) {

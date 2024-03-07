@@ -15,6 +15,5 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then(data => {
         produtosContainer.textContent = data.qtdItens;
-        console.log('Resposta do backend:', data.qtdItens)
     });
 });

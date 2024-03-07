@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         return response.json();
     })
     .then(data => {
-        console.log('Resposta do backend:', data);
         renderCompras(data);
     }); 
 });
