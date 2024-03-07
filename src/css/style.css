@@ -167,3 +167,72 @@ a {
 
 /* ////////////////////////////////////// */
 
+/* Showcase */
+#showcase {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    background: url('/src/img/Avental-Amarelo-MS.jpg') no-repeat center center/cover;
+    padding-top: 10%;
+
+    /* Overlay */
+    background-color: rgba(0,0,0,0.4);
+    background-blend-mode: color;
+}
+
+#showcase-container {
+    text-align: center;
+    margin-top: 15%;
+}
+
+#showcase-container h2 {
+    font-size: 2.5rem;
+}
+
+#showcase-container p {
+    font-size: 1.2rem;
+    padding: 7px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #EC1B22;
+    color: #eee;
+    border-radius: 15px;
+    transition: background 500ms ease;
+    width: 250px;
+    max-height: 60px;
+    margin: 50px 30px;
+}
+
+.main-buttons :nth-child(2n) {
+    background: #ffffff35;
+    border: #ffffff 2px solid;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: #ff474d;
+}
+
+#btn2:hover {
+    background: #ffffff69;
+}
+
+.headline {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+/* ////////////////////////////////////// */
+
