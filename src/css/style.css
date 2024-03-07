@@ -416,3 +416,59 @@ a {
 
 /* ////////////////////////////////////// */
 
+/* Campaign */
+#campaigns {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#campaigns .headline {
+    margin-bottom: 0px;
+}
+
+.campaign-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.campaign-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 320px;
+    height: 320px;
+    background-color: #E0E0E0;
+    margin: 25px;
+    border-radius: 25px;
+    color: #272362;
+}
+
+.campaign-card img {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    margin: 20px 0px;
+}
+
+.campaign-card-title {
+    margin-bottom: 20px;
+}
+
+.campaign-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #272362;
+    text-align: center;
+    margin: 0px 20px;
+}
+
+/* ////////////////////////////////////// */
+
