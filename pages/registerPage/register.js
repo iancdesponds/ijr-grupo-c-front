@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             showPopUp('Registro concluído com sucesso!');
             localStorage.setItem('token', data.token);
-            window.location.href = 'index.html'; 
+            window.location.href = 'loja.html'; 
         })
         .catch(error => {
             console.error('Erro:', error);

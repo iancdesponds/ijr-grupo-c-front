@@ -148,7 +148,7 @@ function showSpinner() {
     }
 
 redirectHome = ()=>{
-    window.location.href = 'index.html';    
+    window.location.href = 'loja.html';    
 }
 
 redirectMinhasCompras = ()=>{

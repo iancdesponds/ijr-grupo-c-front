@@ -28,7 +28,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     .then(data => {
         const token = data.token;
         localStorage.setItem('token', token);
-        window.location.href = 'index.html';
+        window.location.href = 'loja.html';
     })
     .catch(e => {
         showPopUp(e);
