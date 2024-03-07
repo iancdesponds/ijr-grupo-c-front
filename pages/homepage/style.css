@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: poppins;
     list-style: none;
     text-decoration: none;
     scroll-behavior: smooth;
@@ -23,6 +22,14 @@ body{
     color: var(--text-color);
     justify-content: center;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 header{
@@ -38,12 +45,6 @@ header{
     background: #E0E0E0;
     padding: 1px 10%;
     transition: all .35s ease;
-}
-
-.logo{
-    scale: 33%;
-    margin-left: -13rem;
-    margin-top: -1rem;
 }
 
 .navlist{
@@ -232,145 +233,224 @@ header.sticky{
     cursor: pointer;
 }
 
-/*rodape*/
-.contact {
-    background: #272362;
-    display: grid;
-    color: #FFFFFF;
-    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-    gap: 2rem;
+/* ////////////////////////////////////// */
+
+/* Navbar */
+#navbar {
+    width: 100%;
+    background: #ffffff;
+    color: #272362;
+    height: 100px;
+    position: fixed;
+    z-index: 1000;
 }
 
-/*texto dentro do rodape*/
-.contact h3{
-    font-size: 23px;
-    margin-bottom: 1.6rem;
-}
-
-/*icones de redes sociais*/
-.iconsc i{
-    color: #FFFFFF;
-    font-size: 25px;
-    margin-right: 1rem;
-    margin-top: 0.9rem;
-    transition: all .35s ease;
-}
-
-
-/*botao do quero doar*/
-.qrodoar button {
-    height: 40px;
-    padding: 0.2rem;
-    color: #E0E0E0;
-    background-color: #EC1B22;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-left: -3rem;
-}
-
-/*icones redes sociais hover*/
-.iconsc i:hover{
-    color: #EC1B22;
-    transform: scale(1.2) translateY(-5px);
-    cursor: pointer;
-}
-
-.parceiros{
-    text-align: center;
-    padding: 35px;
-}
-
-/* animacao */
-@keyframes scroll{
-    0%{
-        transform: translateX(2px);
-    }
-    99%{
-        transform: translateX(calc(-250px * 5.5));
-    }
-}
-
-/* esteira*/
-.slider {
-    background: #9A98A6;
-    height: 250px;
+#navbar-container {
+    width: 80%;
+    height: 100%;
     margin: auto;
-    overflow: hidden;
-    position: relative;
-    width: auto;
-    margin-bottom: 70px;
-}
-
-/*elemento q roda*/
-.slider .slide-track{
-    animation: scroll 20s linear infinite;
     display: flex;
-    width: calc(250px * 12);
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar-container li, #navbar-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar-mobile {
+    display: none;
+}
+
+.logo img {
+    height: 70px;
+}
+
+#navbar-items {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+#navbar-items li {
+    padding: 15px;
+}
+
+#navbar-items li:hover {
+    text-decoration: underline;
+    text-decoration-color: #F9DE4B;
+}
+
+/* ////////////////////////////////////// */
+
+/* Geral */
+
+.headline {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px;
+    letter-spacing: 2px;
+    font-weight: normal;
 }
 
 
-/* formatacao de cada logo (muito provavelmente tinha uma forma mais inteligente de fazer isso)*/
-.slider .cacau{
-    height: 250px;
-    width: 250px;
-    margin-left: 110px;
-    margin-top: 4.3rem;
+/* ////////////////////////////////////// */
+
+/* Navbar Mobile */
+
+@media screen and (max-width: 860px) {
+    #navbar {
+        width: 100%;
+        height: 180px;
+        display: none;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+    .menu {
+        position: relative;
+    
+        > .menu-trigger {
+            display: inline-grid;
+            place-items: center;
+            padding: 0.5em;
+            border: 1px solid #CCC;
+            border-radius: 0.3em;
+            box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+    
+        > .menu-menu {
+            background: #fff;
+            border: 1px solid #CCC;
+            border-radius: 0.3em;
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
+            position: absolute;
+            right: 5px;
+            margin-top: 0.5em;
+            transition: opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+    
+            
+            > li {
+                padding: 0.2em 0.4em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 5px 0px;
+                > a {
+                    color: #272362;
+                    text-align: center;
+                    text-decoration: underline #F9DE4B;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    
+        &[data-aberto="true"] {
+            > .menu-trigger > .fa-bars {
+            display: none;
+            }
+            
+            > .menu-menu {
+            opacity: 1;
+            visibility: visible;
+            }
+        }
+    
+        &[data-aberto="false"] {
+            > .menu-trigger > .fa-xmark {
+            display: none;
+            }
+            
+            > .menu-menu {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s step-end;
+            }
+        }
+    }
+    .navbar-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        width: 100%;
+        margin: 0px;
+        position: fixed;
+        background-color: #fff;
+        z-index: 10;
+    }
 }
 
-.slider .entreposto{
-    height: 250px;
-    width: 250px;
-    margin-left: 110px;
-    margin-top: 5.6rem;
+/* /////////////////////////////////////////// */
+
+/* Footer */
+#footer {
+    width: 100%;
+    background: #272362;
+    color: #eee;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
 }
 
-.slider .nag{
-    height: 250px;
-    width: 250px;
-    margin-left: 110px; 
-    margin-bottom: -20rem;
+#footer .headline {
+    color:#ffffff;
+    margin: 30px 0px 0px;
+    padding-bottom:20px;
 }
 
-.slider .colegio{
-    height: 250px;
-    width: 250px;
-    scale: 99%;
-    margin-left: 110px;
-    margin-top: -0.1rem;
+hr {
+    width:60%;
+    margin: 20px 0px;
+}
+#social-media-link {
+    display:flex;
+    align-items: center;
+    padding: 0px 10px;
 }
 
-.slider .insperjr{
-    height: 250px;
-    width: 250px;
-    scale: 84%;
-    margin-left: 110px; 
-    margin-top: -0.3rem;
+#social-media-link a {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    padding: 0px 5px;
+
+}
+#social-media-link p {
+    display: flex;
+    margin: 10px 0px;
+    text-align: center;
+    width: fit-content;
+    max-width: 90%;
+    text-wrap: wrap;
 }
 
-.slider .mattosfilho{
-    height: 250px;
-    width: 250px;
-    margin-left: 110px;
-    margin-top: -0.1rem;
+#social-media-link i {
+    margin: 10px;
 }
 
-.slider .choco{
-    height: 250px;
-    width: 250px;
-    margin-left: 110px; 
-    margin-top: -0.2rem;
+.flaticon {
+    display: flex;
+    font-size: 10px;
+    margin-top: 10px;
 }
 
-
-.slider .agax{
-    scale: 81%;
-    height: 250px;
-    width: 250px;
-    margin-left: 80px;
-    margin-top: -1.4rem;
-}
-
-
+/* /////////////////////////////////////////// */
