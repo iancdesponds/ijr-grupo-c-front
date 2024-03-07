@@ -236,3 +236,147 @@ a {
 
 /* ////////////////////////////////////// */
 
+/* About */
+
+.headline {
+    margin: 30px 0;
+    color:#272362;
+    font-weight: normal;
+}
+
+#squares {
+    width: 80%;
+    margin-bottom: 40px;
+    z-index: -1;
+}
+
+.texts {
+    display: flex;
+    width: 75%;
+    position: absolute;
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+.texts h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.historia-square {
+    padding-right:100px;
+    padding-top: 100px;
+
+}
+
+.sobre-square {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-top: 160px;
+    justify-content: end;
+}
+
+.overlap-section {
+    display: flex;
+    width: 80%;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    height: 0vh; 
+    min-height: fit-content;
+    color: #ffffff;
+}
+
+.square {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    width: 40%;
+    min-height: 360px;
+    height: fit-content;
+    background-color: #EC1B22;
+    position: absolute;
+    left: 200px; 
+    left: 10;
+    padding: 30px;
+    font-size: 1rem;
+}
+
+.square h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.square2 span {
+    padding-left: 25%;
+}
+
+.square1 {
+    z-index: 2; 
+}
+
+.square2 {
+    background-color: #272362; 
+    z-index: 1;
+    width: 40%;
+    left: 45%; 
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    min-height: 400px;
+}
+
+#about-mobile {
+    display: none;
+    height: 0px;
+}
+
+@media screen and (max-width: 1180px) {
+    #about {
+        display: none;
+    }
+
+    #squares {
+        display: none;
+    }
+
+    #about-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 40px;
+    }
+
+    .squares {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .square-mobile {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        min-height: 300px;
+        height: fit-content;
+        background-color: #EC1B22;
+        padding: 30px;
+        font-size: 1rem;
+        margin: 20px;
+        color: #ffffff;
+    }
+
+    .square2-mobile {
+        background-color: #272362;  
+    }
+
+}
+
+/* ////////////////////////////////////// */
+
