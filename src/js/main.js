@@ -27,6 +27,20 @@ window.addEventListener("scroll", function () {
     }
 });
 
+// Tamanho da section about responsivo
+document.addEventListener("DOMContentLoaded", function() {
+    // Função para atualizar a altura da seção about2
+    function updateAbout2Height() {
+        const overlapSectionContentHeight = document.querySelector('.overlap-section').scrollHeight;
+        document.getElementById('about').style.height = overlapSectionContentHeight*1.3 + 'px';
+    }
+
+    // Atualize a altura quando a página carregar e quando houver uma mudança no tamanho do conteúdo
+    updateAbout2Height();
+    window.addEventListener('resize', updateAbout2Height);
+    window.addEventListener('load', updateAbout2Height);
+});
+
 // Menu mobile
 const $menu = document.getElementById('menu');
 const $menuTrigger = document.getElementById('menu-trigger');
