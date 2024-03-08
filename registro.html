@@ -9,6 +9,37 @@
     <link rel="icon" type="image/png" href="src/img/MSfavicon.png" />
 </head>
 <body>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div id="navbar-container">
+            <div class="logo"><img src="src/img/MS-logo.png" alt=""></div>
+            <ul id="navbar-items">
+                <li><a id="link-inicio" href="index.html">Início</a></li>
+                <li><a id="link-store" href="loja.html">Loja</a></li>
+                <li><a id="link-ajudar" href="donate.html">Como ajudar?</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- ------------------------------------------------ -->
+
+    <!-- Mobile Navbar -->
+    <nav class="navbar-mobile">
+        <div class="logo"><img src="src/img/MS-logo.png" alt=""></div>
+        <div id="menu" class="menu" data-aberto="false">
+            <span id="menu-trigger" class="menu-trigger">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark"></i>
+            </span>
+            <ul class="menu-menu">
+                <li><a id="link-inicio" href="index.html">Início</a></li>
+                <li><a id="link-store" href="loja.html">Loja</a></li>
+                <li><a id="link-ajudar" href="donate.html">Como ajudar?</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- ------------------------------------------------ -->
+
     <div class="registro-container">
         <form id="registroForm">
             <h2>Registro</h2>
@@ -29,6 +60,16 @@
         </form>
     </div>
     <div id="popup" class="popup"></div>
+
+    <!-- ------------------------------------------------ -->
+
+    <!-- Scripts/Sources -->
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4cca064234.js" crossorigin="anonymous"></script>
+
+    <!-- JS file -->
+    <script src="src/js/main.js"></script>
     <script src="pages/registerpage/register.js"></script>
     <script src="pages/common/popup.js"></script>
 </html>

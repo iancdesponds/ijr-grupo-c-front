@@ -228,21 +228,17 @@ a {
 .headline {
     font-size: 2.2rem;
     text-transform: uppercase;
-    font-weight: bold;
     text-align: center;
     padding-bottom: 50px;
     letter-spacing: 2px;
+    font-weight: normal;
+    color:#272362;
+    margin: 30px 0;
 }
 
 /* ////////////////////////////////////// */
 
 /* About */
-
-.headline {
-    margin: 30px 0;
-    color:#272362;
-    font-weight: normal;
-}
 
 #squares {
     width: 80%;

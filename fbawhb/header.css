@@ -1,125 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
-    width: 100%;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f2f5;
-    margin: 0;
-}
-
-.login-container {
-    background: #ffffff;
-    padding: 40px 60px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-}
-
-h2 {
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-    margin-top: 0px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #555;
-}
-
-input[type=email], input[type=password] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    box-sizing: border-box;
-    transition: border-color 0.3s;
-}
-
-input[type=email]:focus, input[type=password]:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-button {
-    padding: 12px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-.registro-link {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.registro-link a{
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-@media (max-width: 600px) {
-    .login-container {
-        padding: 20px 30px;
-    }
-}
-
-@keyframes pulseAnimation {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.02);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  
-  .animate-pulse {
-    animation: pulseAnimation 0.5s ease-in-out;
-}
-
 /* ////////////////////////////////////// */
 
 /* Navbar */
@@ -130,7 +8,6 @@ button:hover {
     height: 100px;
     position: fixed;
     z-index: 1000;
-    top: 0px;
 }
 
 #navbar-container {
@@ -172,27 +49,6 @@ button:hover {
     text-decoration-color: #F9DE4B;
 }
 
-#menu-icon{
-    font-size: 34px;
-    color: var(--text-color);
-    z-index: 10001;
-    margin-right: 20px;
-}
-
-.header-icons i{
-    font-size: 32px;
-    color: #272362;
-    margin-right: 20px;
-    transition: all .36s ease;
-}
-.header-icons {
-    display: flex;
-    align-items: center;
-}
-
-.header-icons i {
-    padding-left: 20px;
-}
 
 /* ////////////////////////////////////// */
 
@@ -290,15 +146,4 @@ button:hover {
     }
 }
 
-/* /////////////////////////////////////////// */
-
-.headline {
-    font-size: 2.2rem;
-    text-transform: uppercase;
-    text-align: center;
-    padding-bottom: 50px;
-    letter-spacing: 2px;
-    font-weight: normal;
-    color:#272362;
-    margin: 30px 0;
-}
+/* ////////////////////////////////////// */
