@@ -23,7 +23,7 @@ function updateQuantity(index, amount) {
         }
     })
     .catch(error => {
-        console.error('Erro na solicitação ao backend:', error.message);
+        showPopUp(error);
     });
 }
 

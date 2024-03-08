@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="pages/cartpage/carrinho.css">
+    <link rel="stylesheet" href="pages/common/popup.css">
     <link rel="icon" type="image/png" href="src/img/MSfavicon.png" />
     <title>Carrinho de Compras</title>
 </head>
@@ -12,7 +13,7 @@
     <!-- Navbar -->
     <nav id="navbar">
         <div id="navbar-container">
-            <div class="logo"><img src="src/img/MS-logo.png" alt=""></div>
+            <div class="logo"><a href="loja.html"><a href="loja.html"><img src="src/img/MS-logo.png" alt=""></a></a></div>
             <ul id="navbar-items">
                 <li><a id="link-inicio" href="index.html">Início</a></li>
                 <li><a id="link-store" href="loja.html">Loja</a></li>
@@ -22,7 +23,6 @@
             <div class="header-icons">
                 <a href="#" id="carrinho-icon" onclick="redirectCarrinho()">
                     <i class="bx bx-shopping-bag"></i>
-                    <span id="carrinho-count" class="count">0</span>
                 </a>
                 <a href="login.html"><i class="fa-solid fa-user"></i></a>
             </div>
@@ -32,7 +32,7 @@
 
     <!-- Mobile Navbar -->
     <nav class="navbar-mobile">
-        <div class="logo"><img src="src/img/MS-logo.png" alt=""></div>
+        <div class="logo"><a href="loja.html"><img src="src/img/MS-logo.png" alt=""></a></div>
         <div id="menu" class="menu" data-aberto="false">
             <span id="menu-trigger" class="menu-trigger">
             <i class="fa-solid fa-bars"></i>
@@ -48,7 +48,6 @@
             <div class="header-icons">
                 <a href="#" id="carrinho-icon" onclick="redirectCarrinho()">
                     <i class="bx bx-shopping-bag"></i>
-                    <span id="carrinho-count" class="count">0</span>
                 </a>
                 <a href="login.html"><i class="fa-solid fa-user"></i></a>
             </div>  
@@ -64,13 +63,11 @@
             <p>Quantidade de Itens: <span id="item-count">0</span></p>
         </div>
         <div class="checkout-btn">
-            <button id="checkout-button" class="checkout-button" onclick="showSpinner()">Finalizar Compra
-                <i id="loading" class="fas fa-spinner fa-spin hidden"></i>
-            </button>
+            <button id="checkout-button" class="checkout-button" onclick="showSpinner()">Finalizar Compra</button>
             <div id="spinner" class="spinner" hidden></div>
         </div>
     </div>
-
+    <div id="popup" class="popup"></div>
     <!-- ------------------------------------------------ -->
 
     <!-- Scripts/Sources -->
@@ -82,6 +79,7 @@
     <script src="src/js/main.js"></script>
 
     <script src="pages/cartpage/carrinho.js"></script>
+    <script src="pages/common/popup.js"></script>
 </body>
 </html>
 
