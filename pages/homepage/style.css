@@ -229,7 +229,7 @@ section{
 
 /*hover da box de um produto so*/
 .box:hover{
-    transform: scale(1.2) translateY(-5px);
+    transform: scale(1.05) translateY(-5px);
     cursor: pointer;
 }
 
@@ -246,6 +246,7 @@ section{
     letter-spacing: 2px;
     font-weight: normal;
     color: #272362;
+    margin: 50px 0px;
 }
 
 /* ////////////////////////////////////// */

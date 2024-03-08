@@ -79,16 +79,3 @@ $menuTrigger.addEventListener('click', () => {
   
   $menu.dataset.aberto = state;
 })
-
-// Redirecionamento para admin-page
-window.onload = function() {
-    console.log("Redirecionando para admin-page");
-    var currentPath = window.location.pathname;
-    var currentHost = window.location.host;
-    var targetHost = "127.0.0.1:8000";
-
-    if (currentPath === "/admin/") {
-        var newURL = "http://" + targetHost + currentPath;
-        window.location.href = newURL;
-    }
-};
