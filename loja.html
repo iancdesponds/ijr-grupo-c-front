@@ -3,18 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Mães Solidárias</title>
         <link rel="stylesheet" type="text/css" href="pages/homepage/style.css">
-
+        
         <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
         <link rel="icon" type="image/png" href="src/img/MSfavicon.png" />
         <script src="pages/homepage/script.js"></script>
         <script src="pages/homepage/produtos.js"></script>
         <script src="pages/homepage/carrinho.js"></script>
-
+        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+        <title>Mães Solidárias</title>
     </head>
 </html>
 
@@ -64,21 +65,32 @@
     <!-- ------------------------------------------------ -->
 
     <!---home----->
-    <section class="home" id="home">
+    <!-- <section class="home" id="home">
         <div class="home-text">
         <h1>Bem-vindo a nossa loja!</h1>
         <p>Compre e nos ajude a transformar vidas</p>
         </div>
-    </section>
+    </section> -->
+
+    <!-- ------------------------------------------------ -->
+
+    <!-- Showcase -->
+    <header id="showcase">
+        <div id="showcase-container">
+            <h2>Bem-vindo a nossa loja!</h2>
+            <p>Compre e nos ajude a transformar vidas</p>
+        </div>
+    </header>
+    <!-- ------------------------------------------------ -->
 
     <div id="popup" class="popup" onclick="redirectCarrinho()"> Produto adicionado ao carrinho! </div>
 
     <!---titulo da sessao dos produtos-->
     <section class="products" id="products">
         <div class="headline">Nossos Produtos</div>
+        <div class="produto"></div> 
     </section>
 
-    <div class="produto"></div> 
 
     <!-- ------------------------------------------------ -->
     <!-- Footer -->
