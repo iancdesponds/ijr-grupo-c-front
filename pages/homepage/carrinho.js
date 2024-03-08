@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     var produtosContainer = document.getElementsByClassName("count")[0];
+    var produtosContainer1 = document.getElementsByClassName("count1")[0];
+    console.log(produtosContainer);
     fetch("http://localhost:8000/carrinho/", {
         method: 'GET',
         headers: {
@@ -15,5 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then(data => {
         produtosContainer.textContent = data.qtdItens;
+        produtosContainer1.textContent = data.qtdItens;
     });
 });
