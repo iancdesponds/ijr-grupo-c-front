@@ -245,6 +245,7 @@ section{
     padding-bottom: 50px;
     letter-spacing: 2px;
     font-weight: normal;
+    color: #272362;
 }
 
 /* ////////////////////////////////////// */
@@ -310,6 +311,14 @@ section{
     color: #272362;
     margin-right: 20px;
     transition: all .36s ease;
+}
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons i {
+    padding-left: 20px;
 }
 
 /* ////////////////////////////////////// */
