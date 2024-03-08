@@ -131,6 +131,20 @@ function showSpinner() {
     document.getElementById('checkout-button').hidden = true;
     spinner.hidden = false;
 
+    fetch("http://localhost:8000/checkout/", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Token ' + localStorage.getItem('token'),
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Erro na requisição ao backend");
+        }
+        return response.json();
+    });
+
     setTimeout(()=>{
         spinner.hidden = true;
         document.getElementById('cart-summary').hidden = true;
